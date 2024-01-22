@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+
+struct ToDo {
+    var Title: String
+    var Description: String
+}

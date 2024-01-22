@@ -9,10 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var toDoListArray: [ToDo] = []
+    
+    var toDoDataManager = ToDoDataManager()
+    
     private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .systemPink
+        tableView.backgroundColor = .systemRed
         return tableView
     }()
     
@@ -20,7 +24,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
                 
         view.addSubview(tableView)
+        tableView.rowHeight = 100
         
+        toDoDataManager.makeToDoDataArray()
+        toDoListArray = toDoDataManager.getToDoDataArray()
+        
+        tableView.dataSource = self
+        tableView.register(ToDoTableViewCell.self, forCellReuseIdentifier: "cell")
         
         ConfigureConstraints()
     }
@@ -38,3 +48,24 @@ class ViewController: UIViewController {
     }
 }
 
+
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return toDoListArray.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ToDoTableViewCell
+        
+        cell.TitleLabel.text = toDoListArray[indexPath.row].Title
+        cell.DescriptionLabel.text = toDoListArray[indexPath.row].Description
+        
+        
+        return cell
+    }
+    
+    
+}

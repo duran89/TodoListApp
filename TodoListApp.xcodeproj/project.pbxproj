@@ -12,6 +12,9 @@
 		AD7D6D592B5EEAFF00F3B97D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D6D582B5EEAFF00F3B97D /* ViewController.swift */; };
 		AD7D6D5E2B5EEB0000F3B97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7D6D5D2B5EEB0000F3B97D /* Assets.xcassets */; };
 		AD7D6D612B5EEB0000F3B97D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7D6D5F2B5EEB0000F3B97D /* LaunchScreen.storyboard */; };
+		AD7D6D6C2B5EEF7600F3B97D /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D6D6B2B5EEF7600F3B97D /* ToDo.swift */; };
+		AD7D6D6E2B5EF03B00F3B97D /* ToDoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D6D6D2B5EF03B00F3B97D /* ToDoDataManager.swift */; };
+		AD7D6D702B5EF1C900F3B97D /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D6D6F2B5EF1C900F3B97D /* ToDoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		AD7D6D5D2B5EEB0000F3B97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7D6D602B5EEB0000F3B97D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7D6D622B5EEB0000F3B97D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7D6D6B2B5EEF7600F3B97D /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		AD7D6D6D2B5EF03B00F3B97D /* ToDoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataManager.swift; sourceTree = "<group>"; };
+		AD7D6D6F2B5EF1C900F3B97D /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +62,39 @@
 			children = (
 				AD7D6D542B5EEAFF00F3B97D /* AppDelegate.swift */,
 				AD7D6D562B5EEAFF00F3B97D /* SceneDelegate.swift */,
-				AD7D6D582B5EEAFF00F3B97D /* ViewController.swift */,
+				AD7D6D6A2B5EEEC600F3B97D /* Models */,
+				AD7D6D692B5EEEC000F3B97D /* Views */,
+				AD7D6D682B5EEE9E00F3B97D /* Controllers */,
 				AD7D6D5D2B5EEB0000F3B97D /* Assets.xcassets */,
 				AD7D6D5F2B5EEB0000F3B97D /* LaunchScreen.storyboard */,
 				AD7D6D622B5EEB0000F3B97D /* Info.plist */,
 			);
 			path = TodoListApp;
+			sourceTree = "<group>";
+		};
+		AD7D6D682B5EEE9E00F3B97D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD7D6D582B5EEAFF00F3B97D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AD7D6D692B5EEEC000F3B97D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD7D6D6F2B5EF1C900F3B97D /* ToDoTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD7D6D6A2B5EEEC600F3B97D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD7D6D6B2B5EEF7600F3B97D /* ToDo.swift */,
+				AD7D6D6D2B5EF03B00F3B97D /* ToDoDataManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +170,9 @@
 				AD7D6D592B5EEAFF00F3B97D /* ViewController.swift in Sources */,
 				AD7D6D552B5EEAFF00F3B97D /* AppDelegate.swift in Sources */,
 				AD7D6D572B5EEAFF00F3B97D /* SceneDelegate.swift in Sources */,
+				AD7D6D702B5EF1C900F3B97D /* ToDoTableViewCell.swift in Sources */,
+				AD7D6D6C2B5EEF7600F3B97D /* ToDo.swift in Sources */,
+				AD7D6D6E2B5EF03B00F3B97D /* ToDoDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
